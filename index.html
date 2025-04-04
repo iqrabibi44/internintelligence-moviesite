@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmagnet - Streaming Movies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Filmagnet</div>
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">MOVIE</a></li>
+            <li><a href="moviesdet.html">MOVIE DETAILS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+        </ul>
+        <div class="search-sign">
+            <input type="text" placeholder="Search...">
+            <button>SIGN IN</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-bg" id="hero-bg-1" style="background-image: url(https://wallpapers.com/images/hd/beauty-and-the-beast-dark-castle-1at9mahe2cdrh9ma.jpg); opacity: 1;"></div>
+        <div class="hero-bg" id="hero-bg-2" style="background-image: url(https://static1.srcdn.com/wordpress/wp-content/uploads/2022/06/No-Ryan-Gosling-Isnt-Too-Old-To-Play-Ken-In-Barbie.jpg); opacity: 0;"></div>
+        <div class="hero-bg" id="hero-bg-3" style="background-image: url(https://wallpapercave.com/wp/wp7363323.jpg); opacity: 0;"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title" id="movie-title">Beauty and the Beast</h1>
+            <p class="hero-description" id="movie-description">Unlimited Entertainment, Movies, TVs shows, & More.</p>
+            <div class="movie-info">
+                <span><i class="fas fa-film"></i> Movie</span>
+                <span><i class="fas fa-star"></i> HD</span>
+                <span><i class="fas fa-tags"></i> Action, Drama</span>
+                <span><i class="fas fa-calendar-alt"></i> 2023</span>
+            </div>
+            <button class="play-button" id="play-trailer">PLAY NOW</button>
+        </div>
+    </section>
+    
+    <div id="trailer-container">
+        <span class="close-trailer">&times;</span>
+        <iframe id="trailer-iframe"
+            src="https://www.youtube.com/embed/e3Nl_TCQXuw"
+            title="Beauty and the Beast Trailer"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    
+        
+       
+    </section>
+
+
+
+    <!--new codeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
+
+    <!-- Inside your movies grid (where movies are displayed) -->
+
+
+    <!--endof new code-->
+    <section class="genres">
+        <h2 class="section-title">Browse by Genre</h2>
+        <div class="genre-buttons" id="genre-buttons">
+            <button class="genre-btn active" data-genre="all">All</button>
+            <!-- Genres will load here -->
+        </div>
+        
+        <button class="favorites-toggle" id="show-favorites">
+            <i class="fas fa-heart"></i> Show Favorites
+        </button>
+        
+        <div class="movies-grid" id="movies-container">
+            <!-- Movies will load here -->
+        </div>
+    </section>
+
+    <!-- Trailer Popup -->
+    <div id="trailer-container">
+        <span class="close-trailer">&times;</span>
+        <iframe id="trailer-iframe" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="movies.js"></script>
+</body>
+</html>

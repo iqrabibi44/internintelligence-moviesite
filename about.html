@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Filmagnet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reuse your existing styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #111;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        :root {
+    --bg-color: #1A2130;
+    --second-bg-color: #323946;
+    --main-color: #D98324;
+    --text-color: #fff;
+}
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+
+        /* New About Page Styles */
+        .about-hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 0 20px;
+        }
+
+        .about-hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #feca57);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+       
+       
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            background: rgba(255,255,255,0.1);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            transform: translateY(-3px);
+        }
+
+        .stats-section {
+            background: linear-gradient(45deg, #111, #1a1a1a);
+            padding: 60px 40px;
+            border-radius: 10px;
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            padding: 30px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: 700;
+            margin: 0;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .stat-label {
+            margin: 10px 0 0;
+            color: #aaa;
+        }
+
+        ::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color); /* Track color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-color); /* Thumb color */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid var(--bg-color); /* Adds padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color); /* Thumb color on hover */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* "auto" or "thin" */
+    scrollbar-color: var(--bg-color) var(--bg-color); /* Thumb and track color */
+}
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+            }
+            
+            .about-image, .about-text {
+                flex: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <section class="about-hero">
+        <div>
+            <h1>Our Story</h1>
+            <p>Passionate about bringing the magic of cinema to your screens</p>
+        </div>
+    </section>
+
+    <div class="about-container">
+        <section class="about-section">
+            <div class="about-text">
+                <h2>About Filmagnet</h2>
+                <p>Founded in 2023, Filmagnet is the ultimate destination for movie lovers. We're dedicated to providing you with the latest films, classic favorites, and everything in between. Our platform is designed by cinephiles, for cinephiles.</p>
+                <p>With a constantly growing library of thousands of titles, personalized recommendations, and high-quality streaming, we're revolutionizing how you experience movies at home.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Movie theater">
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2>By The Numbers</h2>
+            <p>Our impact in the streaming world</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <p class="stat-number">10,000+</p>
+                    <p class="stat-label">Movies Available</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">5M+</p>
+                    <p class="stat-label">Happy Users</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">24/7</p>
+                    <p class="stat-label">Streaming</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-number">100+</p>
+                    <p class="stat-label">Countries</p>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <section class="about-section">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Our mission">
+            </div>
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>At Filmagnet, we believe everyone deserves access to great cinema. Our mission is to break down barriers to film appreciation by providing an affordable, accessible platform that celebrates diverse voices in filmmaking.</p>
+                <p>We're committed to supporting independent filmmakers while bringing you the best of mainstream cinema, all in one place.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // You can add interactive elements here if needed
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.href === window.location.href) {
+                link.style.color = '#feca57';
+                link.style.fontWeight = '600';
+            }
+        });
+    </script>
+</body>
+</html>
