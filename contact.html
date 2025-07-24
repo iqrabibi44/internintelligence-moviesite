@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Base Styles */
+       
         html, body {
             margin: 0;
             padding: 0;
@@ -17,7 +17,7 @@
             overflow-x: hidden;
         }
         
-        /* Cinematic Background */
+       
         body {
             background: 
                 linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
@@ -38,7 +38,7 @@
             100% { background-position: 0% 0%; }
         }
         
-        /* Header (Reused) */
+        
         .header {
             display: flex;
             justify-content: space-between;
@@ -100,7 +100,7 @@
             width: 100%;
         }
 
-        /* Contact Container */
+      
         .contact-container {
             display: flex;
             justify-content: center;
@@ -110,7 +110,7 @@
             position: relative;
         }
         
-        /* Film Strip Effect */
+        
         .contact-container:before {
             content: '';
             position: absolute;
@@ -124,7 +124,7 @@
             pointer-events: none;
         }
         
-        /* Transparent Contact Card */
+       
         .contact-card {
             background: rgba(20, 20, 20, 0.9);
             backdrop-filter: blur(10px);
@@ -201,7 +201,7 @@
             font-weight: 300;
         }
         
-        /* Form Styles */
+       
         .contact-form input,
         .contact-form textarea {
             width: 100%;
@@ -276,7 +276,7 @@
             transform: translateY(0);
         }
         
-        /* Contact Methods */
+       
         .contact-methods {
             display: flex;
             gap: 20px;
@@ -366,28 +366,28 @@
         }
         
         ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-color); /* Track color */
-    border-radius: 10px; /* Rounded corners */
+    background: var(--bg-color); 
+    border-radius: 10px; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--bg-color); /* Thumb color */
-    border-radius: 10px; /* Rounded corners */
-    border: 3px solid var(--bg-color); /* Adds padding around the thumb */
+    background: var(--bg-color);
+    border-radius: 10px; 
+    border: 3px solid var(--bg-color); 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--text-color); /* Thumb color on hover */
+    background: var(--text-color); 
 }
 
-/* For Firefox */
+
 html {
-    scrollbar-width: thin; /* "auto" or "thin" */
-    scrollbar-color: var(--bg-color) var(--bg-color); /* Thumb and track color */
+    scrollbar-width: thin; 
+    scrollbar-color: var(--bg-color) var(--bg-color); 
 }
         /* Responsive */
         @media (max-width: 768px) {
@@ -479,14 +479,14 @@ html {
     </div>
 
     <script>
-        // Enhanced form handling with movie-themed responses
+       
         document.getElementById('movieContactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form values
+            
             const name = this.querySelector('input[type="text"]').value;
             
-            // Create random movie quote for response
+            
             const quotes = [
                 "That's a wrap! We'll get back to you soon.",
                 "Cut! Message received. Talk soon!",
@@ -498,10 +498,10 @@ html {
             
             const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
             
-            // Create personalized response
+            
             let response = `Thanks ${name || 'movie buff'}! ` + randomQuote;
             
-            // Show themed alert
+           
             const alertBox = document.createElement('div');
             alertBox.style.position = 'fixed';
             alertBox.style.top = '20px';
@@ -519,16 +519,16 @@ html {
             
             document.body.appendChild(alertBox);
             
-            // Remove after animation
+            
             setTimeout(() => {
                 document.body.removeChild(alertBox);
             }, 3000);
             
-            // Reset form
+          
             this.reset();
         });
         
-        // Add keyframes for alert animation
+        
         const style = document.createElement('style');
         style.innerHTML = `
             @keyframes fadeIn {
