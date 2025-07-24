@@ -327,7 +327,7 @@ body {
 
 
 
-/* ===== Movie Grid Styles ===== */
+
 .movies-grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -422,28 +422,28 @@ color: #feca57;
 
 
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+    width: 12px; 
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-color); /* Track color */
-    border-radius: 10px; /* Rounded corners */
+    background: var(--bg-color); 
+    border-radius: 10px; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--bg-color); /* Thumb color */
-    border-radius: 10px; /* Rounded corners */
-    border: 3px solid var(--bg-color); /* Adds padding around the thumb */
+    background: var(--bg-color); 
+    border-radius: 10px; 
+    border: 3px solid var(--bg-color); 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--text-color); /* Thumb color on hover */
+    background: var(--text-color); 
 }
 
-/* For Firefox */
+
 html {
-    scrollbar-width: thin; /* "auto" or "thin" */
-    scrollbar-color: var(--bg-color) var(--bg-color); /* Thumb and track color */
+    scrollbar-width: thin; 
+    scrollbar-color: var(--bg-color) var(--bg-color); 
 }
 
 
@@ -451,7 +451,7 @@ html {
 
 
 
-/*inside of your style tag*/
+
 
 
 
