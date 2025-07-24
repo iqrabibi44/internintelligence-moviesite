@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Reused from your main styles */
+       
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
@@ -57,7 +57,7 @@
             color: #feca57;
         }
 
-        /* Movie Details Styles */
+       
         .movie-details-hero {
             position: relative;
             height: 70vh;
@@ -252,7 +252,7 @@
         </ul>
     </header>
 
-    <!-- Dynamic Hero Section (Background will be set by JavaScript) -->
+  
     <section class="movie-details-hero" id="movie-hero">
         <div class="hero-overlay"></div>
         <div class="movie-info">
@@ -307,7 +307,7 @@
                     <p>Actor Name</p>
                     <p class="character">Character</p>
                 </div>
-                <!-- More cast cards will be added dynamically -->
+               
             </div>
         </div>
         
@@ -318,38 +318,35 @@
                 <div class="similar-movie">
                     <img src="https://via.placeholder.com/150x220" alt="Similar Movie">
                 </div>
-                <!-- More similar movies will be added dynamically -->
+              
             </div>
         </div>
     </div>
 
-    <!-- Trailer Modal -->
+   
     <div id="trailer-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; justify-content: center; align-items: center;">
         <span id="close-trailer" style="position: absolute; top: 30px; right: 30px; color: white; font-size: 2em; cursor: pointer;">&times;</span>
         <iframe id="trailer-iframe" width="80%" height="70%" style="border: none; border-radius: 10px;" allowfullscreen></iframe>
     </div>
 
     <script>
-        // This would be replaced with actual data fetching from your API
+       
         document.addEventListener('DOMContentLoaded', function() {
-            // Get movie ID from URL (example: movie-details.html?id=123)
+           
             const urlParams = new URLSearchParams(window.location.search);
-            const movieId = urlParams.get('id') || '550'; // Default to movie ID 550 (Fight Club)
+            const movieId = urlParams.get('id') || '550';
             
-            // Fetch movie details (in a real app, you'd use your API)
+           
             fetchMovieDetails(movieId);
             
-            // Set up event listeners
+           
             document.getElementById('play-trailer').addEventListener('click', playTrailer);
             document.getElementById('favorite-btn').addEventListener('click', toggleFavorite);
             document.getElementById('close-trailer').addEventListener('click', closeTrailer);
         });
         
         function fetchMovieDetails(movieId) {
-            // In a real implementation, you would fetch from your API:
-            // fetch(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}`)
             
-            // Mock data for demonstration:
             const mockMovie = {
                 title: "Fight Club",
                 backdrop_path: "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
@@ -375,25 +372,25 @@
                 trailer: "https://www.youtube.com/embed/BdJKm16Co6M"
             };
             
-            // Update page with movie data
+           
             document.getElementById('movie-title').textContent = mockMovie.title;
             document.getElementById('movie-hero').style.backgroundImage = `url(https://image.tmdb.org/t/p/w1280${mockMovie.backdrop_path})`;
             document.getElementById('movie-overview').textContent = mockMovie.overview;
             
-            // Update meta info
+           
             document.querySelector('.rating').textContent = `⭐ ${mockMovie.vote_average}/10`;
             document.querySelector('.meta-info span:nth-child(2)').textContent = mockMovie.release_date.substring(0, 4);
             document.querySelector('.meta-info span:nth-child(3)').textContent = `${Math.floor(mockMovie.runtime/60)}h ${mockMovie.runtime%60}m`;
             document.querySelector('.meta-info span:nth-child(4)').textContent = mockMovie.genres.map(g => g.name).join(', ');
             
-            // Update details
+           
             document.getElementById('movie-director').textContent = mockMovie.director;
             document.getElementById('movie-writers').textContent = mockMovie.writers;
             document.getElementById('movie-release-date').textContent = new Date(mockMovie.release_date).toLocaleDateString();
             document.getElementById('movie-budget').textContent = `$${mockMovie.budget.toLocaleString()}`;
             document.getElementById('movie-revenue').textContent = `$${mockMovie.revenue.toLocaleString()}`;
             
-            // Update cast
+            
             const castContainer = document.getElementById('movie-cast');
             castContainer.innerHTML = '';
             mockMovie.cast.forEach(actor => {
@@ -406,7 +403,7 @@
                 `;
             });
             
-            // Update similar movies
+           
             const similarContainer = document.getElementById('similar-movies');
             similarContainer.innerHTML = '';
             mockMovie.similar.forEach(movie => {
@@ -417,7 +414,7 @@
                 `;
             });
             
-            // Store trailer URL for later
+           
             document.getElementById('movie-hero').dataset.trailer = mockMovie.trailer;
         }
         
@@ -439,7 +436,7 @@
             const btn = document.getElementById('favorite-btn');
             btn.classList.toggle('active');
             
-            // In a real app, you would save to localStorage or your backend
+           
             if (btn.classList.contains('active')) {
                 // Add to favorites
             } else {
