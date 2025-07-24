@@ -3,7 +3,7 @@ const trailerContainer = document.getElementById('trailer-container');
 const trailerIframe = document.getElementById('trailer-iframe');
 const closeTrailer = document.querySelector('.close-trailer');
 
-// Background rotation variables
+
 const backgrounds = [
     {
         bg: document.getElementById('hero-bg-1'),
@@ -29,30 +29,29 @@ let currentBg = 0;
 let isTrailerPlaying = false;
 let backgroundRotationInterval;
 
-// Function to start background rotation
+
 function startBackgroundRotation() {
     backgroundRotationInterval = setInterval(() => {
-        if (!isTrailerPlaying) { // Only rotate if no trailer is playing
-            // Hide current background
+        if (!isTrailerPlaying) { 
             backgrounds[currentBg].bg.style.opacity = 0;
             
-            // Update to next background
+            
             currentBg = (currentBg + 1) % backgrounds.length;
             
-            // Show new background
+           
             backgrounds[currentBg].bg.style.opacity = 1;
             
-            // Update movie info
+           
             document.getElementById('movie-title').textContent = backgrounds[currentBg].title;
             document.getElementById('movie-description').textContent = backgrounds[currentBg].description;
             
-            // Update trailer URL
+            
             trailerIframe.src = backgrounds[currentBg].trailer;
         }
     }, 5000);
 }
 
-// Start the background rotation
+
 startBackgroundRotation();
 
 playButton.addEventListener('click', () => {
@@ -75,7 +74,7 @@ const API_KEY = '5b840d0df49fca6fefa830d98e674c8c';
 const BASE_URL = 'https://api.themoviedb.org/3';
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-// DOM Elements
+
 const elements = {
     moviesContainer: document.getElementById('movies-container'),
     genreButtons: document.getElementById('genre-buttons'),
@@ -91,7 +90,7 @@ const elements = {
     movieSummaries: document.getElementById('movie-summaries')
 };
 
-// Initialize
+
 async function init() {
     await fetchGenres();
     await loadHomePageContent();
@@ -163,10 +162,10 @@ function setupEventListeners() {
         }
     });
 
-    // Favorites toggle
+    
     elements.showFavorites.addEventListener('click', toggleFavoritesView);
 
-    // Movie card interactions
+   
     elements.moviesContainer.addEventListener('click', (e) => {
         const card = e.target.closest('.movie-card');
         if (!card) return;
@@ -179,7 +178,7 @@ function setupEventListeners() {
         }
     });
 
-    // Trailer popup
+    
     document.querySelector('.close-trailer').addEventListener('click', () => {
         elements.trailerContainer.style.display = 'none';
         elements.trailerIframe.src = '';
